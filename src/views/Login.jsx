@@ -5,7 +5,11 @@ export default class Login extends Component {
         return (
             <div>
                 我是登录页面
+                <button onClick={this.ret.bind(this)}>返回</button>
             </div>
         )
+    }
+    ret(){
+        this.props.history.go(-1)
     }
 }

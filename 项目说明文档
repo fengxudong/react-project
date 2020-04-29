@@ -5,11 +5,9 @@ package.json存在已下载的模块：
                  react-redux -S
 
 components 文件夹  用于存放 普通组件
-filters  文件夹 用于存放过滤器
-router  路由页面
+filters  文件夹 用于存放封装文件
 store   redux 存放数据状态
 style 存放样式
 view 存放路由组件
 
 setupProxy文件  设置代理服务·
-/node_modules/react-scripts/scripts/start.js  此文件修改项目端口号
