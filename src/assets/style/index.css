@@ -1,0 +1,14 @@
+nav{
+    position: absolute;
+    bottom:0;
+    width: 375px;
+    height: 49px;
+    background: orange;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav p{
+    display: flex;
+    flex-direction: column;
+}

@@ -5,6 +5,7 @@ import {
     Switch,
     Redirect,
 } from "react-router-dom";
+import '../assets/style/index.css'
 import Home from "./Home"
 import My from "./My"
 import Theater from "./Theater"
@@ -17,13 +18,13 @@ export default class Index extends Component {
 
     render() {
         return (
-            <div>
+            <div className="index">
                 
                     <nav>
-                        <NavLink exact className={"App-link"} activeClassName={"App-active"} to={"/"}>首页</NavLink>|
-                        <NavLink className={"App-link"} activeClassName={"App-active"} to={"/theater"}>剧院</NavLink>|
-                        <NavLink className={"App-link"} activeClassName={"App-active"} to={"/ticket"}>票夹</NavLink>|
-                        <NavLink className={"App-link"} activeClassName={"App-active"} to={"/my"}>我的</NavLink>
+                        <p>1<NavLink exact to={"/"}>首页</NavLink></p>
+                        <p>2<NavLink to={"/theater"}>剧院</NavLink></p>
+                        <p>3<NavLink to={"/ticket"}>票夹</NavLink></p>
+                        <p>4<NavLink to={"/my"}>我的</NavLink></p>
                     </nav>
                     <Switch>
 
