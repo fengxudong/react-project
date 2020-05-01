@@ -9,6 +9,7 @@ import Home from "./Home"
 import My from "./My"
 import Theater from "./Theater"
 import Ticket from "./Ticket"
+
 export default class Index extends Component {
     constructor(props) {
         super(props);
