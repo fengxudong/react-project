@@ -8,7 +8,8 @@
 .head_nav{
   position: fixed;
   top: 0;
-  width: 10rem;
+  //width: 10rem;
+  width: 100%;
   height: 1.17333rem;
   line-height: 1.17333rem;
   text-align: center;
@@ -17,14 +18,10 @@
   border-bottom: 1px solid #ebebeb;
   background-color: #fefefe;
   z-index: 100;
-  //.back_box{
-  //  width: 0.2rem;
-  //  height: 0.84rem;
-  //  position: absolute;
-  //}
 .back_icon{
-width: 100%;
-  height: 100%;
+  position: absolute;
+  left: 0.44rem;
+  top: 0.3rem;
 }
   .head_icon{
     position: absolute;
@@ -90,13 +87,13 @@ width: 100%;
   }
 
   .hots_item{
-    width: 2.5rem;
+    width: 2.609274rem;
     height: 0.93333rem;
     margin-bottom: 0.2rem;
   }
 }
 
-//字母列表
+//字母对应地址
 .city_block_row{
   .city_block__row__con__letter{
     height: 0.77333rem;
@@ -117,5 +114,26 @@ width: 100%;
       color: #232323;
       border-bottom: 1px solid #ebebeb;
     }
+  }
+}
+
+// 字母侧边栏
+.city_nav{
+  position: fixed;
+  right: 0.34rem;
+  top: 3.17333rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  .city_nav_lab{
+    font-size: 0.26667rem;
+    color: #666;
+    margin-bottom: 0.08rem;
+    width: 100%;
+    text-align: center;
+  }
+  .active{
+    color: #ff6743;
   }
 }

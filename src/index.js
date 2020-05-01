@@ -9,6 +9,22 @@ import * as serviceWorker from './serviceWorker';
 import "./assets/style/css/reset.css"
 // 引入将px 转为rem的插件
 import "lib-flexible";
+// axios
+import axios from "axios";
+
+React.Component.prototype.$axios = axios;
+
+// axios 请求拦截
+axios.interceptors.request.use(config=>{
+    config.url = "/jc"+config.url;
+    return config;
+})
+
+// axios 响应拦截
+axios.interceptors.response.use(({data})=>{
+    return data;
+})
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
