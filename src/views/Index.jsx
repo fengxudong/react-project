@@ -9,7 +9,7 @@ import Home from "./home/Home"
 import My from "./My"
 import Theater from "./Theater"
 import Ticket from "./Ticket"
-
+import style from "./home/home.module.css"
 export default class Index extends Component {
     constructor(props) {
         super(props);
@@ -28,10 +28,22 @@ export default class Index extends Component {
                     <Redirect to={"/error"} from={"*"}></Redirect>
                 </Switch>
                 <nav>
-                    <NavLink exact className={"App-link"} activeClassName={"App-active"} to={"/"}>首页</NavLink>|
-                    <NavLink className={"App-link"} activeClassName={"App-active"} to={"/theater"}>剧院</NavLink>|
-                    <NavLink className={"App-link"} activeClassName={"App-active"} to={"/ticket"}>票夹</NavLink>|
-                    <NavLink className={"App-link"} activeClassName={"App-active"} to={"/my"}>我的</NavLink>
+                    <NavLink exact className={"App-link"} activeClassName={"App-active"} to={"/"}>
+                        <i className="iconfont icon-shouye"></i>
+                        <span>首页</span>
+                    </NavLink>
+                    <NavLink className={"App-link"} activeClassName={"App-active"} to={"/theater"}>
+                        <i className="iconfont icon-icon-test"></i>
+                        <span>剧院</span>
+                    </NavLink>
+                    <NavLink className={"App-link"} activeClassName={"App-active"} to={"/ticket"}>
+                        <i className="iconfont icon-gerenpiaojia"></i>
+                        <span>票夹</span>
+                    </NavLink>
+                    <NavLink className={"App-link"} activeClassName={"App-active"} to={"/my"}>
+                        <i className="iconfont icon-wode"></i>
+                        <span>我的</span>
+                    </NavLink>
                 </nav>
             </div>
         )
