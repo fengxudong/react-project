@@ -1,50 +1,74 @@
 body{
     font-size: 16px;
+    /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; */
+    background-color: #F5F5F5;  
 }
 html{
     font-size: 26.66666666666667vw;
 }
-#root{
-    /* width: 100%; */
-    /* height: 100%; */
-    max-width: 5.4rem;
+.My{
+    width: 100%;
+     max-width: 5.4rem;
     background: url("../images/bg.png") no-repeat;
     background-size: contain;
     padding-top: 0.20rem ;
     margin: 0 auto;
-}
-#root>div{
-    width: 100%;
+    
 
 }
 .top{
     width: 3.75rem;
     height: 1.895rem;
-    /* background: red; */
     margin: 0 auto;
+  
 }
 .vip{
     width: 3.75rem;
     height: 0.90rem;
-    background: orange;
+    /* background: orange; */
     margin: 0 auto;
+    box-sizing: border-box;
+    vertical-align: center;
+    padding: 0 0.05rem;
+    margin-top: 0.05rem;
+}
+.vip img{
+    width: 100%;
 }
 .card{
     width: 3.75rem;
     height: 1.8897rem;
-    background: green;
+    /* background: green; */
     margin: 0 auto;
+   
 }
+.card div{
+    width: 3.45rem;
+    height: 0.8848rem;
+    background: #fff;
+    margin: 0 auto;
+    margin-bottom: 0.12rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card div dl{
+    font-size: 0.032rem;    
+    color: #666666;
+    width: 25%;
+}
+
 .topMain{
     width: 3.45rem;
     height: 1.5448rem;
-    background: red;
+    background: white;
     margin:0 auto ;
+    border-radius: 0.05rem;
 }
 .topMainCen{
  width: 3.45rem;
  height: 0.51rem;
- background: green;
+ /* background: green; */
  padding: 0 0.15rem;   
  box-sizing: border-box;
  padding-top: 0.05rem;
@@ -55,13 +79,14 @@ html{
     float: left;
     position: relative;
     bottom: 0.15rem;
-   
+    border: 0.005rem solid #ccc;
+    border-radius: 50%;
 
 }
 .topMainCen>.p1{
     width: 1.5rem;
-    font-size: 0.1572rem;
-    /* font-weight: bold; */
+    font-size: 0.15rem;
+    font-weight: bold;
     color:#232323;
     font-family: "Avenir", Helvetica, Arial, sans-serif;
 }
@@ -69,9 +94,56 @@ html{
     font-family: "Avenir", Helvetica, Arial, sans-serif;
     font-size: 0.12rem;
     width: 1.6rem;
+    color: #999999;
+    margin-top: 0.05rem;
 }
 
 .sz{
     width: 0.40rem;
-    margin:  0 0 0.248rem 3.15rem ;
+    margin:  0 0 0.15rem 3.15rem ;
+}
+.topMainBottom{
+    /* background:blue; */
+    width: 0.8097rem;
+    height: 0.2597rem;
+    float: right;
+    border-radius: 0.36rem 0px 0px 0.36rem;;
+    font-size:0.1rem;
+    padding: 0.0009333rem 0.0028rem 0.0009333rem 0.0038667rem;
+    text-align: center;
+    line-height: 0.2597rem;
+    background: #F5F5F5;
+    color: #B3B3B3;
+    font-weight: bold;  
+}
+.topMainCol{
+    width: 100%;
+    /* background:pink; */
+    display: flex;
+   
+    align-items: center;
+    justify-content: space-between;
+}
+.topMainCol p{
+    width: 25%;
+    height: 0.68rem;    
+    background:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     flex-direction: column;
+}
+.topMainCol p b{
+    color: #666666;
+    font-weight: 500;
+    font-size: 0.032rem;
+}
+.topMainCol p i{
+    font-size: 0.2rem;
+    margin-bottom: 0.05rem;
+}
+.topMainCol div{
+    border-left: solid #ccc 0.01rem;
+    height: 0.34rem;
+
 }
