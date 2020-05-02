@@ -18,7 +18,7 @@ export default class Index extends Component {
 
     render() {
         return (
-            <div>
+            <React.Fragment>
                 <Switch>
 
                     <Route path={"/"} exact component={Home}></Route>
@@ -45,7 +45,7 @@ export default class Index extends Component {
                         <span>我的</span>
                     </NavLink>
                 </nav>
-            </div>
+            </React.Fragment>
         )
     }
 

@@ -10,7 +10,7 @@ import Login from "./views/Login"
 import Index from "./views/Index"
 function App() {
   return (
-    <div className="App">
+    <React.Fragment>
         <Router>
           <Switch>
                <Route path={"/login"} component={Login}></Route>
@@ -18,7 +18,7 @@ function App() {
                <Route path={"/"}  component={Index}></Route>
           </Switch>
         </Router>
-    </div>
+    </React.Fragment>
   );  
 }
 
