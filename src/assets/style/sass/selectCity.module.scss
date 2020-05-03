@@ -1,14 +1,15 @@
-
 .city {
   width: 100%;
   height: 100%;
   background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 /*头部*/
 .head_nav{
-  position: fixed;
-  top: 0;
-  //width: 10rem;
+  //position: fixed;
+  //top: 0;
   width: 100%;
   height: 1.17333rem;
   line-height: 1.17333rem;
@@ -43,8 +44,9 @@
 }
 
 //头部下的大板块
-.city_block_wrapper{
-  padding-top: 1.18667rem;
+.main{
+  flex: 2;
+  overflow-y: auto;
 }
 
 //定位城市
@@ -130,10 +132,8 @@
     font-size: 0.26667rem;
     color: #666;
     margin-bottom: 0.08rem;
-    width: 100%;
-    text-align: center;
-  }
-  .active{
-    color: #ff6743;
+     >a:hover{
+         color: #ff6743;
+       }
   }
 }

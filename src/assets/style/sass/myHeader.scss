@@ -1,0 +1,113 @@
+.head_nav{
+  width: 100%;
+  text-align: center;
+
+  .title {
+    height: 1.17333rem;
+    width: 100%;
+    background-color: white;
+    font-size: 0.48rem;
+    color: #232323;
+    position: relative;
+    border-bottom: 1px solid #ebebeb;
+    box-sizing: border-box;
+
+  }
+  .library_title{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+
+    .title_text{
+      position: absolute;
+      text-align: center;
+      height: 1.17333rem;
+      line-height: 1.17333rem;
+      left: 0;
+      right: 0;
+      pointer-events: none;
+    }
+
+    .title_back{
+      padding: 0.29333rem 0.53333rem 0.29333rem 0.26667rem;
+      font-size: 0.48rem;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .title_nav_wrapper{
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+
+      .title_nav{
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding-right: 0.2rem;
+
+        .title_nav_ellipsis{
+          font-size: 0.48rem;
+          padding: 0.29333rem 0.2rem 0.29333rem 0.2rem;
+        }
+      }
+    }
+  }
+
+  .show_type_wrap{
+    height: 1.17333rem;
+    padding:0.26667rem 0.4rem;
+    box-sizing: border-box;
+    background-color: #fefefe;
+    margin-top: 1.17333rem;
+    display: flex;
+    justify-content: space-between;
+
+    .show_type{
+      flex: 1;
+      //width: 7.33333rem;
+      margin-right: 0.13333rem;
+      overflow: hidden;
+      ul{
+        display: flex;
+        white-space: nowrap;
+        overflow-x: scroll;
+      }
+      li{
+        display: inline-block;
+        font-size: 0.4rem;
+        color: #232323;
+        padding: 0 0.13333rem;
+        border-bottom: 0.04rem solid transparent;
+        border-radius: 0.02667rem;
+        //height: 0.64rem;
+        line-height: 0.64rem;
+        margin-right: 0.292rem;
+      }
+      .active{
+        color: #ff6743;
+        border-color: #ff6743;
+      }
+    }
+
+    .city_wrap{
+      width: 2rem;
+      height: 0.37333rem;
+      border-left: 0.02667rem solid #e0e0e0;
+      font-size: 0.4rem;
+      color: #666;
+      line-height: 0.37333rem;
+      margin-top: 0.13333rem;
+      text-align: center;
+      .city{
+
+      }
+    }
+  }
+}
