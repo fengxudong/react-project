@@ -6,6 +6,12 @@ import axios from "axios"
 
 
 export default class My extends Component {
+    constructor(props){
+        super(props)
+        this.state={
+            isLogin:false
+        }
+    }
     render() {
         return (
             <div className="My">
@@ -15,7 +21,14 @@ export default class My extends Component {
                             设置
                        </div>
                        <div className="topMain">
-                           <div className="topMainCen">
+                           <div className="topMainCen" onClick={()=>{
+                               if(this.state.isLogin===true){
+                                   console.log(123123)
+                               }else{
+                                    //    跳转路由
+                                    this.props.history.push("/login")
+                               }
+                           }}>
                                  <img src={headImg} alt=""/><p className="p1">登录/注册</p>
                                  <p className="p2">请点击登录 〉</p>
                            </div>
@@ -29,15 +42,15 @@ export default class My extends Component {
                                </p>
                                <div></div>
                                <p> <i>0</i>
-                                   <b>账户余额</b>
+                                   <b>积分</b>
                                    </p>
                                <div></div>
                                <p> <i>0</i>
-                                   <b>账户余额</b>
+                                   <b>优惠券</b>
                                    </p>
                                <div></div>
-                               <p> <i>0</i>
-                                   <b>账户余额</b>
+                               <p> <i style={{fontSize:"0.13rem"}}>立即开通</i>
+                                   <b>橙PLUE卡</b>
                                    </p>
                            </div>
 
@@ -53,38 +66,38 @@ export default class My extends Component {
                <div className="card">
                    <div>
                        <dl>
-                           <dt className="iconfont icon-kabao"></dt>
+                           <dt className="iconfont icon-icon-"></dt>
                            <dd>我的订单</dd>
                        </dl>
                        <dl>
-                           <dt>1111</dt>
+                           <dt className="iconfont icon-piaojia-moren"></dt>
                            <dd>我的票夹</dd>
                        </dl>
                        <dl>
-                           <dt>3333</dt>
+                           <dt className="iconfont icon-kabao"></dt>
                            <dd>我的卡包</dd>
                        </dl>
                        <dl>
-                           <dt>4444</dt>
-                           <dd>啥也没有</dd>
+                           <dt ></dt>
+                           <dd></dd>
                        </dl>
                    </div>
                    <div>
                    <dl>
-                           <dt>111</dt>
-                           <dd>我的订单</dd>
+                           <dt className="iconfont icon-tongxunlu"></dt>
+                           <dd>实名购票人</dd>
                        </dl>
                        <dl>
-                           <dt>1111</dt>
-                           <dd>我的票夹</dd>
+                           <dt className="iconfont icon-shouhuodizhi"></dt>
+                           <dd>收货地址</dd>
                        </dl>
                        <dl>
-                           <dt>3333</dt>
-                           <dd>我的卡包</dd>
+                           <dt className="iconfont icon-feedback"></dt>
+                           <dd>意见反馈</dd>
                        </dl>
                        <dl>
-                           <dt>4444</dt>
-                           <dd>啥也没有</dd>
+                           <dt className="iconfont icon-kefu"></dt>
+                           <dd>客服帮助</dd>
                        </dl>
                    </div>
                </div>
@@ -92,10 +105,13 @@ export default class My extends Component {
         )
     }
     async componentDidMount(){
-        console.log(111111)
         const {data} = await axios.get("https://api.juooo.com/user/account/getMenuItem?version=6.1.1&referer=2")
-                                        // user/account/getMenuItem?version=6.1.1&referer=2
         console.log(data)
     }
+    // toLogin(){
+    //      //    跳转路由
+    //      this.props.history.push("/login")
+    // }
+
 }
 

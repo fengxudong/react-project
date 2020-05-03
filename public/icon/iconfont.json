@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "1183399",
+      "name": "通讯录",
+      "font_class": "tongxunlu",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
       "icon_id": "4992247",
       "name": "订单",
       "font_class": "icon-",
@@ -25,6 +32,13 @@
       "font_class": "shouhuodizhi",
       "unicode": "e60e",
       "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "9241832",
+      "name": "票夹_28 (2)",
+      "font_class": "piaojia_",
+      "unicode": "e617",
+      "unicode_decimal": 58903
     },
     {
       "icon_id": "10289760",

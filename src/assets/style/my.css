@@ -57,6 +57,15 @@ html{
     color: #666666;
     width: 25%;
 }
+.card div dl dt{
+    font-size: 0.25rem;
+    color: #666;
+}
+.card div dl dd{
+    font-size: 0.123rem;
+    color: #666;
+    margin-top: 0.05rem;
+}
 
 .topMain{
     width: 3.45rem;
@@ -136,7 +145,7 @@ html{
 .topMainCol p b{
     color: #666666;
     font-weight: 500;
-    font-size: 0.032rem;
+    font-size: 0.14rem;
 }
 .topMainCol p i{
     font-size: 0.2rem;

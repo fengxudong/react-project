@@ -1,0 +1,122 @@
+body{
+    background: #fefefe;
+    height: 100%;
+}
+html{
+    height: 100%;
+}
+.Login{
+    width:100% ;
+    max-width: 5.4rem;
+    height: 8.1rem;
+    background: #fefefe;
+}
+
+.loginTop{
+    width: 100%;
+    height: 0.43rem;
+
+}
+.loginTop button{
+    float: left;
+}
+.loginLogo{
+    width: 100%;
+    height: 1.13rem;
+
+}
+.loginLogo img{
+    width: 1.6rem;
+    height: 0.5rem;
+    margin: 0.285rem auto 0;
+}
+.loginFrom{
+    /* background: pink; */
+    padding-top: 0.1rem;
+}
+.loginFrom hr{
+    width: 84%;
+}
+.loginFrom p{
+    /* border: 1px solid #333; */
+    width: 3.5rem;
+    margin: 0 auto;
+}
+.loginFrom p input{
+    width: 90%;
+    height: 0.3rem;
+    font-size: 0.16rem;
+}
+.loginFrom>input{
+    width: 84%;
+    height: 0.5rem;
+    margin:0.5rem 0 0.2rem 0;
+    background: linear-gradient(50deg, #ff9a34, #ff4d4a);
+    color: #FEFEFE;
+    opacity: 0.4;
+    border-radius: 0.66667rem;
+}
+.logbot{
+    width: 82%;
+    margin: 0 auto;
+    color: #666666;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.15rem;
+}
+#bastBottom{
+    width: 100%;
+    /* margin-top: 1.5rem; */
+    position:absolute;
+    bottom: 0.4rem;
+}
+.bastBottom{
+    display: flex;
+    /* position: relative; */
+    /* top: 30%; */
+    width: 83%;
+    margin: 0 auto 0.18rem;
+
+}
+.bastBottom p{
+    /* width: 15%; */
+    font-size: 0.1rem;
+    margin-top: 0.015rem;
+}
+.bastBottom hr{
+    width: 20%;
+    /* height: 0.01rem; */
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}
+.logqqwb{
+    display: flex;
+    /* height: 0.35rem; */
+    justify-content: space-evenly;
+    /* margin-top: 0.03rem; */
+}
+.logqqwb p{
+    width: 0.35rem;
+}
+.logqqwb p img{
+    width: 100%;
+    height: 100%;
+
+}
+#lightprompt{
+    width: 1.5rem;
+    height: 0.7rem;
+    background: #ccc;
+    opacity: 0.5;
+    text-align: center;
+    line-height: 0.7rem;
+    border-radius: 0.1rem;
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto auto;
+    display: none;
+}

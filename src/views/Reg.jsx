@@ -15,6 +15,7 @@ export default class Login extends Component {
         }
         
     }
+    // 获取表单数据
     handleContentChange = (event)=>{
         const target = event.target
       const value = target.type === "checkbox"? target.checked:target.value
@@ -29,7 +30,7 @@ export default class Login extends Component {
             this.setState({
                 islogto:true,
             })
-        }else{
+        }else if(this.state.userId ==="" || this.state.userPassword === ""){
             document.querySelector(".loginFrom>input").style.opacity ="0.5"
             this.setState({
                 islogto:false,
@@ -55,13 +56,13 @@ export default class Login extends Component {
                    <hr/>
                     <p><input type="text" name="userPassword" onChange={this.handleContentChange} placeholder="请输入密码" /></p>
                     <hr/>
-                    <input type="button"  onClick ={this.loginTo.bind(this)} value="登录" />
+                    <input type="button"  onClick ={this.loginTo.bind(this)} value="注册" />
                 </div>
                 <div className="logbot">
                     <p>忘记密码</p>
                     <p onClick={()=>{
                         this.props.history.push("/reg")
-                    }}>短信登录/注册</p>
+                    }}>密码登录</p>
                 </div>
 
                 <div id="bastBottom">
