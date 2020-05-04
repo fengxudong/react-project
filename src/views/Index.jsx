@@ -9,7 +9,6 @@ import Home from "./home/Home"
 import My from "./My"
 import Theater from "./Theater"
 import Ticket from "./Ticket"
-import style from "./home/home.module.css"
 export default class Index extends Component {
     constructor(props) {
         super(props);

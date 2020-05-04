@@ -7,7 +7,18 @@ import store from "./store"
 import * as serviceWorker from './serviceWorker';
 // 引入px2rem插件
 import "lib-flexible";
+//引入axios
+import axios from "axios";
+React.Component.prototype.$axios = axios;
+//设置请求拦截
+axios.interceptors.request.use(config=>{
+    config.url = "/jc" +config.url;
+    return config;
+})
 
+axios.interceptors.response.use(({data})=>{
+    return data;
+})
 ReactDOM.render(
     <React.StrictMode>
         <Provider store={store}>

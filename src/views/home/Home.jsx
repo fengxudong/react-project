@@ -1,7 +1,11 @@
 import React, {Component} from 'react'
 import style from "./home.module.css";
+import {connect} from "react-redux";
+import homeCreator, {changeSlideList} from "../../store/actionCreator/home";
+import {bindActionCreators} from "redux";
+import BannerAdv from "../../components/home/BannerAdv";
 
-export default class Home extends Component {
+class Home extends Component {
     render() {
         return (
             <React.Fragment>
@@ -30,9 +34,8 @@ export default class Home extends Component {
                         <div className={style.banner}>
                             <div className={style.bannerContainer}>
                                 <div className={style.bannerSwitch}>
-                                    <img
-                                        src="https://image.juooo.com/group1/M00/04/40/rAoKNV6W4PKACOg2AAEj0bMT7bw022.png"
-                                        alt=""/>
+                                    {/*组件*/}
+                                    <BannerAdv slideList={this.props.slide_list}></BannerAdv>
                                 </div>
                             </div>
                         </div>
@@ -40,66 +43,18 @@ export default class Home extends Component {
                         {/* 演唱会*/}
                         <section className={style.adverSection}>
                             <div className={style.labelItem}>
-                                <div>
-                                    <a href="#">
-                                        <img src="https://image.juooo.com/group1/M00/03/6C/rAoKmV4Bd7KAJp3dAAAHBeNpsuY695.png" alt=""/>
-                                        <span>演唱会</span>
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="#">
-                                        <img src="https://image.juooo.com/group1/M00/03/6C/rAoKmV4Bd76ANIqeAAAEry8ElbE406.png" alt=""/>
-                                        <span>音乐剧</span>
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="#">
-                                        <img src="https://image.juooo.com/group1/M00/04/16/rAoKNV4Bd8mAOtozAAAGbMSgYxk302.png" alt=""/>
-                                        <span>舞台剧</span>
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="#">
-                                        <img src="https://image.juooo.com/group1/M00/03/6C/rAoKmV4Bd9OAWX_4AAAGGUutSLg074.png" alt=""/>
-                                        <span>儿童剧</span>
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="#">
-                                        <img src="https://image.juooo.com/group1/M00/04/16/rAoKNV4BeD6ACydtAAAFBhGYLbw928.png" alt=""/>
-                                        <span>音乐会</span>
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="#">
-                                        <img src="https://image.juooo.com/group1/M00/03/6C/rAoKmV4BeEmAGJjkAAACgQbFPTY821.png" alt=""/>
-                                        <span>欢聚橙卡</span>
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="#">
-                                        <img src="https://image.juooo.com/group1/M00/04/16/rAoKNV4BeFSASMNWAAADvXoqPxw946.png" alt=""/>
-                                        <span>橙PLUS卡</span>
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="#">
-                                        <img src="https://image.juooo.com/group1/M00/04/16/rAoKNV4BeHiAGAi8AAAFggWA0y8333.png" alt=""/>
-                                        <span>VIP+专区</span>
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="#">
-                                        <img src="https://image.juooo.com/group1/M00/03/6C/rAoKmV4BeICAJE6WAAAErgoy82o140.png" alt=""/>
-                                        <span>积分兑换</span>
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="#">
-                                        <img src="https://image.juooo.com/group1/M00/04/16/rAoKNV4BeJGAcwDeAAAGEkAF0kA904.png" alt=""/>
-                                        <span>拼团</span>
-                                    </a>
-                                </div>
+
+                                {
+                                    this.props.classify_list.map(v=>(
+                                        <div key={v.id}>
+                                            <a href={v.url} target={"_blank"}>
+                                                <img src={v.pic}/>
+                                                <span>{v.name}</span>
+                                            </a>
+                                        </div>
+                                    ))
+                                }
+
                             </div>
 
                             {/* vip*/}
@@ -156,7 +111,7 @@ export default class Home extends Component {
                             </div>
                         </section>
                         {/*热门演出*/}
-                        <div className={style.hotWrap}>
+                        <div className={style.hotWrap} >
                             <div className={style.hotWrapTitle}>
                                 <h3>热门演出</h3>
                                 <div>
@@ -167,45 +122,23 @@ export default class Home extends Component {
                             {/* 主题*/}
                             <div className={style.hotWrapContent}>
                                 <div className={style.hotSwiper}>
-                                    <div className={style.hotSwiperItem}>
-                                        <a href="#">
-                                            <div className={style.hotPic}>
-                                                <img
-                                                    src="https://image.juooo.com//group1/M00/03/6C/rAoKmV4AZ3GAK-xpAABsQm0qZyQ219.jpg"/>
+                                    {
+                                        this.props.hots_show_list.map((v,i)=>(
+                                            <div className={style.hotSwiperItem} key={i}>
+                                                <a href={v.schedular_url}>
+                                                    <div className={style.hotPic}>
+                                                        <img src={v.pic}/>
+                                                    </div>
+                                                    <h3>{v.show_name}</h3>
+                                                </a>
                                             </div>
-                                            <h3>2020第七届城市戏剧节 《涂红》-石家庄站</h3>
-                                        </a>
-                                    </div>
-                                    <div className={style.hotSwiperItem}>
-                                        <a href="#">
-                                            <div className={style.hotPic}>
-                                                <img
-                                                    src="https://image.juooo.com//group1/M00/03/6C/rAoKmV4AZ3GAK-xpAABsQm0qZyQ219.jpg"/>
-                                            </div>
-                                            <h3>2020第七届城市戏剧节 《涂红》-石家庄站</h3>
-                                        </a>
-                                    </div>
-                                    <div className={style.hotSwiperItem}>
-                                        <a href="#">
-                                            <div className={style.hotPic}>
-                                                <img
-                                                    src="https://image.juooo.com//group1/M00/03/6C/rAoKmV4AZ3GAK-xpAABsQm0qZyQ219.jpg"/>
-                                            </div>
-                                            <h3>2020第七届城市戏剧节 《涂红》-石家庄站</h3>
-                                        </a>
-                                    </div>
-                                    <div className={style.hotSwiperItem}>
-                                        <a href="#">
-                                            <div className={style.hotPic}>
-                                                <img
-                                                    src="https://image.juooo.com//group1/M00/03/6C/rAoKmV4AZ3GAK-xpAABsQm0qZyQ219.jpg"/>
-                                            </div>
-                                            <h3>2020第七届城市戏剧节 《涂红》-石家庄站</h3>
-                                        </a>
-                                    </div>
+                                        ))
+                                    }
                                 </div>
                             </div>
                         </div>
+
+
                         {/*巡回演出*/}
                         <div className={style.tourWarp}>
                             <div className={style.hotWrapTitle}>
@@ -413,9 +346,53 @@ export default class Home extends Component {
                             </div>
                         </div>
                     </section>
-
                 </main>
             </React.Fragment>
         )
     }
+
+    async componentDidMount() {
+        this.props.getSlideList.call(this);
+        this.props.getDiscountList.call(this);
+        this.props.getHotShowList.call(this);
+        console.log("props",this.props)
+    }
 }
+
+function mapStateToProps(state) {
+    return {
+        //轮播图
+        slide_list: state.home.slide_list,
+        classify_list:state.home.classify_list,
+        discountList:state.home.discountList,
+        hots_show_list:state.home.hots_show_list
+    }
+}
+
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators(homeCreator, dispatch);
+    // return {
+    //     //获取数据
+    //     // getSlideList(){
+    //     //     //console.log(this,222)
+    //     //     dispatch(homeCreator.getSlideList.call(this));
+    //     // }
+    //     // async getSlideList(){
+    //     //     //异步action
+    //     //     dispatch(async ()=>{
+    //     //         const {data}= await this.$axios.get("/home/index/getClassifyHome");
+    //     //         console.log(data.slide_list);
+    //     //         //更新
+    //     //         dispatch(changeSlideList(data.slide_list))
+    //     //     })
+    //     // }
+    //     // async getSlideList(){
+    //     //     const {data}= await this.$axios.get("/home/index/getClassifyHome");
+    //     //     console.log(data.slide_list);
+    //     //     //更新
+    //     //     dispatch(changeSlideList(data.slide_list))
+    //     // }
+    // }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home)
