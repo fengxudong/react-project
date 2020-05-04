@@ -8,12 +8,14 @@ import {
 } from "react-router-dom"
 import Login from "./views/Login"
 import Index from "./views/Index"
+import Detail from "./views/Detail"
 function App() {
   return (
     <div className="App">
         <Router>
           <Switch>
                <Route path={"/login"} component={Login}></Route>
+               <Route path={"/detail"} component={Detail}></Route>
                <Route path={"/error"} component={()=><div>404，你找的页面不存在</div>}></Route>
                <Route path={"/"}  component={Index}></Route>
           </Switch>

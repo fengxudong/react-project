@@ -1,0 +1,20 @@
+可以通过flexible该插件将px转换成rem.
+1、安装
+    flexible:可以自动为项目将加viewport标签。动态。
+    postcss-px2rem:负责将px转为rem.
+    cnpm install lib-flexible postcss-px2rem -S
+2、修改webpack配置信息。
+    node_module/react-scripts/config/webpack.config.js
+   1、引入
+       const px2rem = require("postcss-px2rem")
+   2、增加代码：114
+       px2rem({remUnit:75}),//  这里表示的意思是75px转为1rem
+3、打开src/index.js
+      import "lib-flexible";
+**********************************************************************
+剧院列表接口
+https://api.juooo.com/theatre/index/getTheatreList?page=1&version=6.1.1&referer=2
+剧院演出列表接口
+https://api.juooo.com/Show/Search/getShowList?page=1&venue_id=1078,1079,1795&version=6.1.1&referer=2
+详情页接口
+https://api.juooo.com/Show/Search/getShowList?category=79&city_id=1&version=6.1.1&referer=2
