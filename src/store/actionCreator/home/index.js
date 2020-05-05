@@ -6,7 +6,6 @@ export function changeSlideList(payload) {
         payload
     }
 }
-
 export function changeClassfiyList(payload) {
     return {
         type: homeType.UP_CLASSFIFY_LIST,
@@ -22,6 +21,12 @@ export function changeDiscountList(payload) {
 export function changeHotShowList(payload) {
     return {
         type: homeType.UP_HOT_SHOW_LIST,
+        payload
+    }
+}
+export function changeShowList(payload) {
+    return {
+        type: homeType.UP_SHOW_LIST,
         payload
     }
 }
@@ -44,12 +49,27 @@ export default {
             dispatch(changeDiscountList(data.discountList));
         }
     },
+    //热门演出
     getHotShowList(){
         return async dispatch => {
             const {data} = await this.$axios.get("/home/index/getHotsRecommendList?city_id=0&version=6.1.1&referer=2");
-            console.log("数据2", data);
+            //console.log("数据2", data);
             //更新
             dispatch(changeHotShowList(data.hots_show_list));
+        }
+    },
+    //列表
+    getShowList(pageIndex=1){
+        return async dispatch => {
+            const {data} = await this.$axios.get("/Show/Search/getShowList",{
+                params:{
+                    city_id:0,
+                    page:pageIndex
+                }
+            });
+            console.log("数据2", data);
+            //更新
+            dispatch(changeShowList(data));
         }
     }
 }

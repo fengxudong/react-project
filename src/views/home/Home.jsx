@@ -4,8 +4,13 @@ import {connect} from "react-redux";
 import homeCreator, {changeSlideList} from "../../store/actionCreator/home";
 import {bindActionCreators} from "redux";
 import BannerAdv from "../../components/home/BannerAdv";
-
+import BannerVip from "../../components/home/BannerVip";
+import Recommend from "../../components/home/Recommend";
 class Home extends Component {
+    constructor(props) {
+        super(props);
+    }
+
     render() {
         return (
             <React.Fragment>
@@ -45,7 +50,7 @@ class Home extends Component {
                             <div className={style.labelItem}>
 
                                 {
-                                    this.props.classify_list.map(v=>(
+                                    this.props.classify_list.map(v => (
                                         <div key={v.id}>
                                             <a href={v.url} target={"_blank"}>
                                                 <img src={v.pic}/>
@@ -72,34 +77,8 @@ class Home extends Component {
                                     </div>
                                 </a>
                                 {/* vip轮播*/}
-                                <div className={style.vipSwiper}>
-                                    <div className={style.vipSwiperContainer}>
-                                        <div className={style.vipSwiperPic}>
-                                            <img
-                                                src="https://image.juooo.com/group1/M00/03/38/rAoKmV2_wuuAQ3PKAAC-dYecJHk485.jpg"
-                                                alt=""/>
-                                        </div>
-                                        {/*右侧*/}
-                                        <div className={style.vipSwiperRight}>
-                                            <a href="#">
-                                                <h3>【小橙堡】经典成长童话《三只小猪》-固安站</h3>
-                                            </a>
-                                            <p>
-                                                <span>5</span>
-                                                <span>折起</span>
-                                            </p>
-                                            <a href="#">
-                                                <span>立即抢购</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    {/* 分页*/}
-                                    <div className={style.vipSwiperPagination}>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                </div>
+                                <BannerVip discountList={this.props.discountList}></BannerVip>
+
                             </section>
                             {/*广告*/}
                             <div className={style.advertion}>
@@ -111,7 +90,7 @@ class Home extends Component {
                             </div>
                         </section>
                         {/*热门演出*/}
-                        <div className={style.hotWrap} >
+                        <div className={style.hotWrap}>
                             <div className={style.hotWrapTitle}>
                                 <h3>热门演出</h3>
                                 <div>
@@ -123,7 +102,7 @@ class Home extends Component {
                             <div className={style.hotWrapContent}>
                                 <div className={style.hotSwiper}>
                                     {
-                                        this.props.hots_show_list.map((v,i)=>(
+                                        this.props.hots_show_list.map((v, i) => (
                                             <div className={style.hotSwiperItem} key={i}>
                                                 <a href={v.schedular_url}>
                                                     <div className={style.hotPic}>
@@ -238,10 +217,10 @@ class Home extends Component {
                                     <a href="#">
                                         <div className={style.hotPic}>
                                             <img
-                                                src="https://image.juooo.com//group1/M00/03/6C/rAoKmV4AZ3GAK-xpAABsQm0qZyQ219.jpg"/>
+                                                src="https://image.juooo.com//group1/M00/03/53/rAoKmV3ghGqAUpQ3AAB9Og9N3kY467.jpg"/>
                                         </div>
                                         <h3>
-                                            【演出延期】2020第七届城市戏剧节 乌镇戏剧节“最佳戏剧奖”“最佳个人表现奖”团队最新作品《涂红》-深圳站
+                                            【演出延期】2020第七届城市戏剧节 马修·伯恩经典全男版芭蕾舞剧《天鹅湖》高清影像-深圳站
                                         </h3>
                                         <p>
                                             <strong>￥99</strong>
@@ -253,13 +232,13 @@ class Home extends Component {
                                     <a href="#">
                                         <div className={style.hotPic}>
                                             <img
-                                                src="https://image.juooo.com//group1/M00/03/6C/rAoKmV4AZ3GAK-xpAABsQm0qZyQ219.jpg"/>
+                                                src="https://image.juooo.com//group1/M00/03/40/rAoKmV3LdBWAImHFAACB1n-G-Nk921.jpg"/>
                                         </div>
                                         <h3>
-                                            【演出延期】2020第七届城市戏剧节 乌镇戏剧节“最佳戏剧奖”“最佳个人表现奖”团队最新作品《涂红》-深圳站
+                                            【演出延期】3D科幻舞台剧《三体Ⅱ黑暗森林》-深圳站
                                         </h3>
                                         <p>
-                                            <strong>￥99</strong>
+                                            <strong>￥180</strong>
                                             <span>起</span>
                                         </p>
                                     </a>
@@ -268,13 +247,13 @@ class Home extends Component {
                                     <a href="#">
                                         <div className={style.hotPic}>
                                             <img
-                                                src="https://image.juooo.com//group1/M00/03/6C/rAoKmV4AZ3GAK-xpAABsQm0qZyQ219.jpg"/>
+                                                src="https://image.juooo.com//group1/M00/03/34/rAoKmV22uICAQ2WLAAFPaGvA5rE897.jpg"/>
                                         </div>
                                         <h3>
-                                            【演出延期】2020第七届城市戏剧节 乌镇戏剧节“最佳戏剧奖”“最佳个人表现奖”团队最新作品《涂红》-深圳站
+                                            四川人民艺术剧院-话剧《苏东坡》-石家庄
                                         </h3>
                                         <p>
-                                            <strong>￥99</strong>
+                                            <strong>￥50</strong>
                                             <span>起</span>
                                         </p>
                                     </a>
@@ -286,86 +265,37 @@ class Home extends Component {
                             <h3>为你推荐</h3>
                             <div className={style.recommendContent}>
                                 {/*主体*/}
-                                <div className={style.recommendMain}>
-                                    {/*每一个*/}
-                                    <div className={style.recommendItem}>
-                                        <div>
-                                            <span>深圳</span>
-                                            <img
-                                                src="https://image.juooo.com/group1/M00/03/25/rAoKmV2f3-yADPouAACAMESBbK8067.jpg"
-                                                alt=""/>
-                                        </div>
-                                        <div className={style.recommendBottom}>
-                                            {/*主办*/}
-                                            <div className={style.recommendTitle}>
-                                                <div>
-                                                    <img src="https://image.juooo.com/upload/i.png" alt=""/>
-                                                </div>
-                                                <h3>【演出延期】聚橙出品 |百老汇现象级原版音乐剧《来自远方》-深圳站</h3>
-                                            </div>
-                                            <p><span>2020.06.12 - 06.14  </span></p>
-                                            <p>
-                                                <span>￥280</span>
-                                                <span> 起</span>
-                                            </p>
-                                            <p>
-                                                <span>电子票</span>
-                                                <span>可选座</span>
-                                                <span>限时8折起</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div className={style.recommendItem}>
-                                        <div>
-                                            <span>深圳</span>
-                                            <img
-                                                src="https://image.juooo.com/group1/M00/03/25/rAoKmV2f3-yADPouAACAMESBbK8067.jpg"
-                                                alt=""/>
-                                        </div>
-                                        <div className={style.recommendBottom}>
-                                            {/*主办*/}
-                                            <div className={style.recommendTitle}>
-                                                <div>
-                                                    <img src="https://image.juooo.com/upload/i.png" alt=""/>
-                                                </div>
-                                                <h3>【演出延期】聚橙出品 |百老汇现象级原版音乐剧《来自远方》-深圳站</h3>
-                                            </div>
-                                            <p><span>2020.06.12 - 06.14  </span></p>
-                                            <p>
-                                                <span>￥280</span>
-                                                <span> 起</span>
-                                            </p>
-                                            <p>
-                                                <span>电子票</span>
-                                                <span>可选座</span>
-                                                <span>限时8折起</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
+                                <Recommend showList={this.props.showList}></Recommend>
                             </div>
                         </div>
                     </section>
                 </main>
+                <div className={style.fixed}>
+                    <a href="https://m.juooo.com/vip/index/1">
+                        <img src="https://image.juooo.com/group1/M00/03/94/rAoKmV58jOmAAI84AAAp3i6IEAQ605.png" alt=""/>
+                    </a>
+                </div>
             </React.Fragment>
         )
     }
 
     async componentDidMount() {
         this.props.getSlideList.call(this);
-        this.props.getDiscountList.call(this);
         this.props.getHotShowList.call(this);
-        console.log("props",this.props)
+        this.props.getDiscountList.call(this);
+        this.props.getShowList.call(this);
     }
 }
 
 function mapStateToProps(state) {
+    //console.log(state.home, 111111);
     return {
         //轮播图
         slide_list: state.home.slide_list,
-        classify_list:state.home.classify_list,
-        discountList:state.home.discountList,
-        hots_show_list:state.home.hots_show_list
+        classify_list: state.home.classify_list,
+        discountList: state.home.discountList,
+        hots_show_list: state.home.hots_show_list,
+        showList:state.home.showList
     }
 }
 

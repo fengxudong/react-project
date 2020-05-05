@@ -12,7 +12,7 @@ export default class Test extends Component {
             })
         })
         const swiperOptions = {
-            preloadImages: false,
+            preloadImages: true,
             autoplay: 4000,
             autoplayDisableOnInteraction: false
         };

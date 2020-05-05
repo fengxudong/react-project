@@ -6,5 +6,8 @@ export default {
     //vip
     discountList:[],
     //热门演出
-    hots_show_list:[]
+    hots_show_list:[],
+    //列表
+    showList:[],
+    page:1
 }

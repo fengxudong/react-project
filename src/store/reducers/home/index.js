@@ -19,5 +19,10 @@ export default function (state = homeInit,{type,payload}) {
     if(type === homeType.UP_HOT_SHOW_LIST){
         state.hots_show_list = payload;
     }
+    //列表
+    if(type === homeType.UP_SHOW_LIST){
+        state.page = payload.page;
+        state.showList = payload.list;
+    }
     return state;
 }
