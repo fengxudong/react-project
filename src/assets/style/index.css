@@ -1,14 +1,23 @@
 nav{
-    position: absolute;
+    position: fixed;
     bottom:0;
     width: 375px;
     height: 49px;
-    background: orange;
+    background: #fff;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    width: 100%;
+    /* max-width: 5.4rem; */
 }
 nav p{
     display: flex;
     flex-direction: column;
+}
+nav img{
+    margin: 0 auto;
+    width: 0.3rem;
+}
+.active{
+    color: red;
 }

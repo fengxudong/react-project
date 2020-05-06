@@ -121,8 +121,8 @@ html{
     padding: 0.0009333rem 0.0028rem 0.0009333rem 0.0038667rem;
     text-align: center;
     line-height: 0.2597rem;
-    background: #F5F5F5;
-    color: #B3B3B3;
+    /* background: #F5F5F5; */
+    /* color: #B3B3B3; */
     font-weight: bold;  
 }
 .topMainCol{

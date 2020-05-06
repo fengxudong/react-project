@@ -3,15 +3,15 @@ import '../assets/style/login.css'
 import loginLogo from '../assets/images/loginlogo.png'
 import qq from '../assets/images/qq.png'
 import wb from '../assets/images/wb.png'
-
-
+import LightPrompt from '../component/LightPrompt'
 export default class Login extends Component {
     constructor(props){
         super(props);
         this.state={
             islogto:false,
             userId:"",
-            userPassword:""
+            userPassword:"",
+            Prompt:"敬请期待!"
         }
         
     }
@@ -55,27 +55,28 @@ export default class Login extends Component {
                    <hr/>
                     <p><input type="text" name="userPassword" onChange={this.handleContentChange} placeholder="请输入密码" /></p>
                     <hr/>
-                    <input type="button"  onClick ={this.loginTo.bind(this)} value="登录" />
+                    <input type="button"  onClick ={this.loginTo.bind(this)} name="dl" value="登录" />
                 </div>
                 <div className="logbot">
                     <p>忘记密码</p>
                     <p onClick={()=>{
                         this.props.history.push("/reg")
-                    }}>短信登录/注册</p>
+                    }}>注册 </p>
                 </div>
-
+                <LightPrompt state={this.state.Prompt}></LightPrompt>
                 <div id="bastBottom">
                 <div className="bastBottom">
                     <hr/><p>其他登录方式</p><hr/>
                     
                 </div>
                 <div className="logqqwb">
-                   <p> <img src={qq} onClick={this.LightPrompt} alt=""/></p>
-                   <p> <img src={wb} onClick={this.LightPrompt} alt=""/></p>
-                </div>
+                   <p> <img src={qq} onClick={this.setTimeOne.bind(this)} name="qq" alt=""/></p>
+                   <p> <img src={wb} onClick={this.setTimeOne.bind(this)} name="wb" alt=""/></p>
                 </div>
                 
-                <div id="lightprompt"> 敬请期待！</div>
+                </div>
+                
+                
             </div>
             
         )
@@ -83,13 +84,45 @@ export default class Login extends Component {
     ret(){
         this.props.history.go(-1)
     }
-    loginTo(){
+    loginTo(event){
+        if(event.target.name === "dl"){
+            this.setState({
+             Prompt:"登陆成功!"
+            })
+         }else{
+             this.setState({
+                 Prompt:"敬请期待!"
+                })
+         }
             if(this.state.islogto === true){
-                console.log(111)
+                const  user = {
+                    userID:this.state.userId,
+                    userPassword:this.state.userPassword
+                }
+                localStorage.setItem("user", JSON.stringify({user}));
+                const tit = document.querySelector("#lightprompt")
+                tit.style.display = "block"
+               setTimeout(
+                ()=>{
+                    tit.style.display = "none"
+                    this.props.history.push("/my")
+                   },1500)
+                
             }
+            
     }
-    
-    LightPrompt(){
+    setTimeOne(event){
+        console.log(event.target.name)
+        if(event.target.name === "dl"){
+            this.setState({
+             Prompt:"登陆成功!"
+            })
+         }else{
+             this.setState({
+                 Prompt:"敬请期待!"
+                })
+         }
+       
         const tit = document.querySelector("#lightprompt")
         tit.style.display = "block"
        setTimeout(
@@ -97,6 +130,7 @@ export default class Login extends Component {
             tit.style.display = "none"
            },1500)
     }
+
     
     componentDidMount(){
         console.log(this.state)

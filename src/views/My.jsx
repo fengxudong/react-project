@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import '../assets/style/my.css'
 import headImg from '../assets/images/headImg.png'
 import vipImg from '../assets/images/vipImg.png'
-import axios from "axios"
+import headImg1 from '../assets/images/headImg1.png'
+// import axios from "axios"
 
 
 export default class My extends Component {
@@ -11,9 +12,13 @@ export default class My extends Component {
         this.state={
             isLogin:false
         }
+      
+        
     }
     render() {
+        console.log(this)
         return (
+            
             <div className="My">
                <div>
                    <div className="top">
@@ -23,16 +28,16 @@ export default class My extends Component {
                        <div className="topMain">
                            <div className="topMainCen" onClick={()=>{
                                if(this.state.isLogin===true){
-                                   console.log(123123)
+                                //    console.log(123123)
                                }else{
                                     //    跳转路由
                                     this.props.history.push("/login")
                                }
                            }}>
-                                 <img src={headImg} alt=""/><p className="p1">登录/注册</p>
-                                 <p className="p2">请点击登录 〉</p>
+                                 <img src={this.state.isLogin===false?headImg:headImg1} alt=""/><p className="p1">{this.state.isLogin===false?"登录/注册":"橙子"}</p>
+                                 <p className="p2">{this.state.isLogin === false?"请点击登录 〉":"ID:6908377"}</p>
                            </div>
-                           <div className="topMainBottom">
+                           <div className="topMainBottom" style={{background:(this.state.isLogin===false?"#F5F5F5":"linear-gradient(-45deg, #f5dea9, #f8d583)"),color:(this.state.isLogin===false?"#B3B3B3":"#454341")}}>
                                 <p>普通会员</p>
                            </div>
                            <div className="topMainCol">
@@ -101,17 +106,26 @@ export default class My extends Component {
                        </dl>
                    </div>
                </div>
+               <button onClick={()=>{
+                   this.setState({
+                       isLogin:false
+                   })
+                   localStorage.removeItem("user");
+               }}>退出登录</button>
             </div>
         )
     }
-    async componentDidMount(){
-        const {data} = await axios.get("https://api.juooo.com/user/account/getMenuItem?version=6.1.1&referer=2")
-        console.log(data)
+    componentWillMount(){
+        
+          // 获取登陆状态
+          var user = JSON.parse(localStorage.getItem("user"));
+          if(user){
+              console.log(111111)
+              this.setState({
+                  isLogin:true
+              })
+          }
     }
-    // toLogin(){
-    //      //    跳转路由
-    //      this.props.history.push("/login")
-    // }
 
 }
 

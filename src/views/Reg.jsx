@@ -3,8 +3,9 @@ import '../assets/style/login.css'
 import loginLogo from '../assets/images/loginlogo.png'
 import qq from '../assets/images/qq.png'
 import wb from '../assets/images/wb.png'
+import axios from 'axios'
 
-
+// 初始数据
 export default class Login extends Component {
     constructor(props){
         super(props);
@@ -24,7 +25,7 @@ export default class Login extends Component {
         [name]:value
       })
       
-     
+    //  判断用户是否输入
         if(this.state.userId && this.state.userPassword){
             document.querySelector(".loginFrom>input").style.opacity ="1"
             this.setState({
@@ -81,12 +82,14 @@ export default class Login extends Component {
             
         )
     }
+    // 返回
     ret(){
         this.props.history.go(-1)
     }
-    loginTo(){
+    async loginTo(){
             if(this.state.islogto === true){
-                console.log(111)
+               alert("注册成功")
+               this.props.history.push("/login")
             }
     }
     

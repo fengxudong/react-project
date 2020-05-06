@@ -104,19 +104,3 @@ html{
     height: 100%;
 
 }
-#lightprompt{
-    width: 1.5rem;
-    height: 0.7rem;
-    background: #ccc;
-    opacity: 0.5;
-    text-align: center;
-    line-height: 0.7rem;
-    border-radius: 0.1rem;
-    position:absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto auto;
-    display: none;
-}
