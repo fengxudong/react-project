@@ -18,3 +18,7 @@ https://api.juooo.com/theatre/index/getTheatreList?page=1&version=6.1.1&referer=
 https://api.juooo.com/Show/Search/getShowList?page=1&venue_id=1078,1079,1795&version=6.1.1&referer=2
 详情页接口
 https://api.juooo.com/Show/Search/getShowList?category=79&city_id=1&version=6.1.1&referer=2
+
+**************************************************************************************************************
+背景图
+ https://image.juooo.com/static/img/theater_detail_bg.png 

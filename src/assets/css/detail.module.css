@@ -2,6 +2,16 @@
     margin: 0;
     padding: 0;
 }
+html,body{
+    height: 100%;
+}
+.body{
+    position: relative;
+}
+.main{
+    overflow: auto;
+    margin-bottom: 110px;
+}
 .bg{
     width:100%;
     height: 436px;
@@ -325,7 +335,12 @@
     height: 288px;
     float: left;
     padding-left: 30px;
-    border-radius: 0.5rem;
+}
+.film>div:nth-child(1)>img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 0.2rem;
 }
 .film>div:nth-child(2){
     height: 288px;
@@ -340,8 +355,13 @@
     font-size: 32px;
 }
 .film>div:nth-child(2)>p:nth-child(2){
+    width: 96%;
+    height: 90px;
+    overflow: hidden;
     font-size: 32px;
     padding-right: 20px;
+    text-overflow:ellipsis;
+    /* white-space: nowrap; */
 }
 .film>div:nth-child(2)>p:nth-child(3){
     font-size: 24px;
@@ -385,7 +405,7 @@
     position: relative;
     position: fixed;
     bottom: 0px;
-    z-index: 1;
+    /* z-index: 1; */
 }
 .foot>div:nth-child(1){
     width: 46px;

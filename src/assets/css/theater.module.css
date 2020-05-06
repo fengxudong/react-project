@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul,li,ol{
+    list-style-type: none;
+}
+.bg{
+    width: 100%;
+}
+.head{
+    width: 100%;
+    height: 88px;
+    font-size: 36px;
+    text-align: center;
+    line-height: 88px;
+    border-bottom: 1px solid #EBEBEB;
+    background-color: white;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+}
+.main{
+    background-color: #FAFAFA;
+    margin: 88px 0px;
+    padding: 20px;
+    z-index: -1;
+}
+.content{
+    color: black;
+    width: 92%;
+    height: 440px;
+    margin-top: 20px;
+    padding: 40px 30px;
+    background-color: white;
+    z-index: 1;
+}
+.content>div:nth-child(1){
+    /* padding-top: px; */
+    position: relative;
+}
+.content>div:nth-child(1)>div:nth-child(1){
+    width: 100px;
+    height: 100px;
+    border-radius: 0.2rem;
+}
+.content>div:nth-child(1)>div:nth-child(1)>img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 0.2rem;
+}
+.content>div:nth-child(1)>div:nth-child(2){
+    width: 85%;
+    position: relative;
+    position: absolute;
+    top: -10px;
+    left: 130px;
+    
+}
+.content>div:nth-child(1)>div:nth-child(2)>p:nth-child(1){
+    width: 82%;
+    margin-top: 10px;
+    font-size: 34px;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.content>div:nth-child(1)>div:nth-child(2)>p:nth-child(2){
+    margin-top: 16px;
+    font-size: 26px;
+    color: #666666;
+}
+.content>div:nth-child(1)>div:nth-child(2)>a{
+    text-decoration: none;
+    position: absolute;
+    right: 40px;
+    top: 26px;
+}
+.content>div:nth-child(1)>div:nth-child(2)>a>i{
+    font-size: 40px;
+}
+/* 时间轴 */
+.content>div:nth-child(2){
+    width: 100%;
+    margin-top: 80px;
+    /* overflow: hidden; */
+}
+.timeline {
+    list-style-type: none;
+    border-top: 1px solid #B5B5B5;
+    /* max-width: 800px; */
+    padding-bottom: 30px;
+    margin: 0px;
+}
+ 
+.timeline>li {
+    float: left;
+    position: relative;
+    text-align: center;
+    width: 30%;
+    padding: 10px 20px 0 0;
+}
+.timeline>li>span{
+    display: block;
+    width: 140px;
+    font-size: 30px;
+    color: #B5B5B5;
+    position: absolute;
+    top: -60px;
+    left: 18%;
+}
+.timeline>li>a{
+    display: block;
+    width: 100%;
+    height: 240px;
+    padding-top: 20px;
+}
+.timeline>li>a>img{
+    width: 100%;
+    height: 100%;
+}
+.timeline>li>b:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 47%;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #B5B5B5;
+    border-radius: 8px;
+    background: #B5B5B5;
+}
