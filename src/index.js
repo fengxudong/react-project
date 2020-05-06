@@ -11,10 +11,9 @@ import "./assets/style/css/reset.css"
 import "lib-flexible";
 // axios
 import axios from "axios";
-
-// 阿里图标
-// import "./assets/style/css/iconfont.js";
 React.Component.prototype.$axios = axios;
+
+
 
 // axios 请求拦截
 axios.interceptors.request.use(config=>{

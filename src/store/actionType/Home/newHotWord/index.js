@@ -1,0 +1,3 @@
+export default {
+   CHANGE_NEW_HOT_WORD:"CHANGE_NEW_HOT_WORD"
+}

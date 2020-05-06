@@ -12,10 +12,9 @@ export default class MyHeader extends Component {
             <div className={`${style.library_title} ${style.title}`}>
                 <span className={style.title_text}>{this.props.title}</span>
                 <i className={style.title_back} onClick={()=>{
-                    this.props.history.push("/")
+                    this.props.history.push("/");
                 }}>返回</i>
                 {/*<span className="iconfont icon-back"></span>*/}
-
                 <div className={style.title_nav_wrapper}>
                     <div className={style.title_nav}>
                         <i className={style.title_nav_ellipsis}>更多</i>

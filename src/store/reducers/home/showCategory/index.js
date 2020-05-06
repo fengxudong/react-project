@@ -5,9 +5,13 @@ export default function (state=showCategoryInit,{type,payload}) {
 if (type === showCategoryType.CHANGE_SHOW_CATEGORY_LIST){
     state.showCategoryList = payload;
 }
-if (type === showCategoryType.CHANGE_SHOW_LIST){
-    state.showList = payload.list;
-    // state.page = payload.page;
-}
+    if (type === "CHANGE_CATEGORY"){
+        console.log(222,payload);
+        if (payload){
+            if (payload.category){
+                state.category = payload.category;
+            }
+        }
+    }
 return state;
 }

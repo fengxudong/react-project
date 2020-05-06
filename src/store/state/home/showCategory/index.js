@@ -1,7 +1,5 @@
 export default {
     showCategoryList:[],
-    showList:[],
-    city_id:0,
-    category:1,
+    category:0,
     page:1,
 }

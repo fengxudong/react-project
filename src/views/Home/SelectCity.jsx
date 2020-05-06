@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {changeCity} from "../../store/actionCreator/Home/location";
 import style from "../../assets/style/sass/selectCity.module.scss";
 import {
     connect
@@ -6,7 +7,6 @@ import {
 import {
     bindActionCreators
 } from "redux";
-import {changeSortedCityList} from "../../store/actionCreator/Home/location";
 import locationCreator from "../../store/actionCreator/Home/location";
 class SelectCity extends Component {
     constructor(props) {
@@ -36,7 +36,7 @@ class SelectCity extends Component {
                                <div className={style.city_block_con}>
                                    <span className={style.city_block_con_tip}>定位城市</span>
                                    <ul className={style.city_block_con_wrap}>
-                                       <li className={`${style.city_block_con_item} ${style.location_item}`}>定位失败，点击重试</li>
+                                       <li className={`${style.city_block_con_item} ${style.location_item}`}>{this.props.city}</li>
                                    </ul>
                                </div>
                                {/*热门城市*/}
@@ -109,6 +109,7 @@ class SelectCity extends Component {
     componentDidMount() {
         this.props.getHotCityList.call(this);
         this.props.getSortedCityList.call(this);
+        this.props.getCity.call(this);
     }
 
 
@@ -117,21 +118,21 @@ function mapStateToProps({location}) {
     return {
         hotCityList:location.hotCityList,
         sortedCityList:location.sortedCityList,
+        city:location.city
     }
 }
 function mapDispatchToProps(dispatch) {
     return bindActionCreators(locationCreator,dispatch);
     // return {
-        // getHotCityList(){
-        //     dispatch(locationCreator.getHotCityList());
-        // },
-        // getSortedCityList(){
-        //     // const getSortedCityList = async dispatch=>{
-        //     //     const {data} = await this.$axios.get("/city/city/getSortedCityList?version=6.1.1&referer=2");
-        //     //     dispatch(changeSortedCityList(data))
-        //     // }
-        //     dispatch(locationCreator.getSortedCityList())
-        // }
+    //     getHotCityList(){
+    //         dispatch(locationCreator.getHotCityList());
+    //     },
+    //     getSortedCityList(){
+    //         dispatch(locationCreator.getSortedCityList());
+    //     },
+    //     getCity(){
+    //        dispatch(locationCreator.getCity())
+    //     }
     // }
 }
 export default connect(mapStateToProps,mapDispatchToProps)(SelectCity);

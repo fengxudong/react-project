@@ -10,7 +10,13 @@ export default class Home extends Component {
                     }}/>  <span className={"location"}>全国</span>
                     <input type="button" value={"去演出页面"} onClick={()=>{
                         this.props.history.push("/show/ShowCategoryList")
-                    }}/>  <span className={"location"}>全国</span>
+                    }}/>
+                    <input type="button" value={"去搜索页面"} onClick={()=>{
+                        this.props.history.push("/search")
+                    }}/>
+                    <input type="button" value={"去日历页面"} onClick={()=>{
+                        this.props.history.push("/calendar")
+                    }}/>
                 </p>
            </div>
         )
