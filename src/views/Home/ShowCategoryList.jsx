@@ -58,7 +58,6 @@ class ShowCategoryList extends Component {
         this.props.getShowCategoryList.call(this);
         this.props.getShowList.call(this);
         this.props.getCity.call(this);
-
     }
 }
 function mapStateToProps({showCategory,showList,location}) {

@@ -68,7 +68,7 @@ class ShowCategroryHeader extends Component {
     }
 
     componentDidMount() {
-        localStorage.category = 0
+        // localStorage.category = 0;
     }
 }
 

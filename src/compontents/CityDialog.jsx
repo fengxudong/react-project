@@ -47,13 +47,11 @@ class CityDialog extends Component {
                                                   // })
                                                   localStorage.city_id = v.id
                                                   this.changeActive(i);
-                                                  console.log(111,this.props);
                                                   this.props.changeCity(v.name)
                                               }}>{v.name}</li>
                                       )
                                    })
                                 }
-
                             </ul>
                         </div>
                     </div>
@@ -63,6 +61,7 @@ class CityDialog extends Component {
                             this.setState({
                                 index:-1
                             })
+                            localStorage.city = "全国"
                         }} className={this.state.index === -1?style.active:""}>重置</span>
                        <span className={style.active1} onClick={()=>{
                            // this.props.getShowList.call(this,{
@@ -82,8 +81,7 @@ class CityDialog extends Component {
     }
      componentDidMount() {
        this.props.getCityList();
-       localStorage.city_id = 0;
-       // console.log(22,this.props)
+       // localStorage.city_id = 0;
     }
 
     changeActive(num){

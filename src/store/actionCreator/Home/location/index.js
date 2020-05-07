@@ -38,7 +38,15 @@ export default {
               citySearch.getLocalCity(function (status, result) {
                   if (status === 'complete' && result.info === 'OK') {
                       // 查询成功，result即为当前所在城市信息
-                      localStorage.city = result.city;
+                      if (localStorage.city){
+                          if (localStorage.city !== result.city){
+                              locationType.city = localStorage.city
+                          }else {
+                              localStorage.city = result.city;
+                          }
+                      }else {
+                          localStorage.city = result.city;
+                      }
                       dispatch(changeCity(result.city));
                   }
               })

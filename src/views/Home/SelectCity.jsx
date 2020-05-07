@@ -48,7 +48,9 @@ class SelectCity extends Component {
                                                return (
                                                    <div key={v.id}>
                                                        <li onClick={()=>{
-                                                           this.props.history.push("/"+v.id)
+                                                           // this.props.history.push("/");
+                                                           localStorage.city_id = v.id
+                                                           localStorage.city = v.name
                                                        }} className={`${style.city_block_con_item} ${style.hots_item}`}>
                                                            {v.name}
                                                        </li>
@@ -74,7 +76,9 @@ class SelectCity extends Component {
                                                        return (
                                                            <ul className={style.city_block__row__con__wrap} key={v.id}>
                                                                <li onClick={()=>{
-                                                                   this.props.history.push("/")
+                                                                   // this.props.history.push("/")
+                                                                   localStorage.city_id = v.id
+                                                                   localStorage.city = v.name
                                                                }} className={style.city_block__row__con__column}>{v.name}</li>
                                                            </ul>
                                                        )

@@ -7,7 +7,7 @@ export default function (state=cityListInit,{type,payload}) {
     }
 
     if (type === "CHANGE_CITY1"){
-        console.log(111,payload);
+        // console.log(111,payload);
         state.city_id = payload.city_id;
     }
 

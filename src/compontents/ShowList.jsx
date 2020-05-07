@@ -1,5 +1,4 @@
 import React, {Component, Fragment} from 'react';
-// import style from "../assets/style/sass/showsLibrary.module.scss";
 import style from "../assets/style/sass/showList.module.scss";
 
 export default class ShowList extends Component {
@@ -60,4 +59,7 @@ export default class ShowList extends Component {
         )
     }
 
+    componentDidMount() {
+        this.props.getShowList.bind(this);
+    }
 }

@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: space-between;
   flex-wrap: wrap;
-  position: absolute;
+  //position: absolute;
 }
 //头部
 .head_nav{
@@ -124,7 +124,7 @@
 
 .main{
   flex: 1;
-  //overflow: hidden;
+  overflow: auto;
   background: #e5e5e5;
 }
 
@@ -151,10 +151,11 @@
 //日历
 .calendar_wrap{
   width: 100%;
-  position: fixed;
-  left: 0;
-  top: 2.61333rem;
-  bottom: 0;
+  margin-top: 0.2rem;
+  //position: fixed;
+  //left: 0;
+  //top: 2.61333rem;
+  //bottom: 0;
 
   .top_change{
     background: #fff;
@@ -194,31 +195,49 @@
   .content{
     display: flex;
     flex-wrap: wrap;
-    padding: 0 3%;
+    padding: 0 0 0 4%;
     width: 100%;
     box-sizing: border-box;
-
     .content_item{
       font-size: 30px;
       width: 13.4%;
       text-align: center;
       position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
 
-      .top_tag{
-        width: 40px;
+      .top_tag,
+      .pre_date,
+      .item_date{
+        width: 80px;
         line-height: 80px;
         margin: auto;
         display: flex;
         justify-content: center;
       }
+      .pre_date{
+        color: #bfbfbf;
+      }
+
+      .item_date{
+        color: #242424;
+      }
+    }
+
+    .current_date{
+      color:#ff6743;
+      background:#FEDAC8;
+      width: 0.77333rem;
+      height: 0.77333rem;
+      lineHeight:0.8rem;
+      borderRadius:50%;
     }
   }
+}
 
-  .days{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 4% 3%;
-    box-sizing: border-box;
-    width: 100%;
-  }
+.show_list{
+  text-align: center;
+  padding: 0.8rem 0.4rem 0;
+  box-sizing: border-box;
 }
