@@ -31,8 +31,12 @@
     width: 90px;
     height: 90px;
     border-radius: 0.9rem;
-    background-image: url(../image/2.jpg);
-    background-size: cover;
+}
+.cirle>img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 0.9rem;
 }
 .content>div:nth-child(1){
     position: relative;
@@ -113,12 +117,16 @@
     font-size: 32px;
     padding-right: 20px;
     text-overflow:ellipsis;
-    white-space: nowrap;
+    /* white-space: nowrap; */
    
 }
 .film>div:nth-child(2)>p:nth-child(3){
+    width: 92%;
     font-size: 24px;
     color: #999999;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
 }
 .film>div:nth-child(2)>div{
     position: relative;
@@ -136,12 +144,12 @@
 }
 .film>div:nth-child(2)>div>div:nth-child(2){
     position: absolute;
-    left: 100px;
+    left: 120px;
 }
 .film>div:nth-child(2)>div>div:nth-child(3){
-    width: 110px;
+    width: 130px;
     position: absolute;
-    left: 200px;
+    left: 240px;
 }
 .film>div:nth-child(2)>p:nth-child(5){
     font-size: 32px;

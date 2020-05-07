@@ -382,6 +382,7 @@ html,body{
     position: absolute;
 }
 .film>div:nth-child(2)>div>div:nth-child(2){
+    width: 130px;
     position: absolute;
     left: 100px;
 }

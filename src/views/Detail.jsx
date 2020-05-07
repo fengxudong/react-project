@@ -1,7 +1,16 @@
 import React, { Component } from 'react';
 import style from "../assets/css/detail.module.css"
 import img from "../assets/image/1.jpg"
+import axios from "axios"
 export default class Detail extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            city_id:1,
+            category:79,
+            result:[]
+        };
+    }
     render() {
         return (
             <div className={style.body}>
@@ -90,54 +99,27 @@ export default class Detail extends Component {
                     {/* 相关推荐 */}
                     <div className={style.simi}>
                         <p>相关推荐</p>
-                        <div className={style.film}>
-                            <div>
-                                <img src="https://image.juooo.com/group1/M00/04/04/rAoKNV3o3tCAbCKNAAB3v6NC4vs503.jpg" 
-                                style={{width:"100%",height:"100%"}} alt=""/>
-                            </div> 
-                            <div>
-                                <p>2020.06.04 - 06.06</p>
-                                <p>聚橙制作 | 百老汇爱情音乐轻喜剧《第一次约会》中文版</p>
-                                <p>深圳 | 南山文体中心剧院大剧院</p>
-                                <div>
-                                    <div>可选座</div>
-                                    <div>套票</div>
-                                </div>
-                                <p>￥100 <span> 起</span></p>
-                            </div>
-                        </div>
-                        <div className={style.film}>
-                            <div>
-                                <img src="https://image.juooo.com/group1/M00/04/04/rAoKNV3o3tCAbCKNAAB3v6NC4vs503.jpg" 
-                                style={{width:"105px",height:"144px"}} alt=""/>
-                            </div> 
-                            <div>
-                                <p>2020.06.04 - 06.06</p>
-                                <p>聚橙制作 | 百老汇爱情音乐轻<br/>喜剧《第一次约会》中文版</p>
-                                <p>深圳 | 南山文体中心剧院大剧院</p>
-                                <div>
-                                    <div>可选座</div>
-                                    <div>套票</div>
-                                </div>
-                                <p>￥100 <span> 起</span></p>
-                            </div>
-                        </div>
-                        <div className={style.film}>
-                            <div>
-                                <img src="https://image.juooo.com/group1/M00/04/04/rAoKNV3o3tCAbCKNAAB3v6NC4vs503.jpg" 
-                                style={{width:"105px",height:"144px"}} alt=""/>
-                            </div> 
-                            <div>
-                                <p>2020.06.04 - 06.06</p>
-                                <p>聚橙制作 | 百老汇爱情音乐轻喜剧《第一次约会》中文版</p>
-                                <p>深圳 | 南山文体中心剧院大剧院</p>
-                                <div>
-                                    <div>可选座</div>
-                                    <div>套票</div>
-                                </div>
-                                <p>￥100 <span> 起</span></p>
-                            </div>
-                        </div>
+                        {
+                            this.state.result.map(v=>{
+                                return (
+                                <div className={style.film} key={v.show_id}>
+                                    <div>
+                                        <img src={v.pic} 
+                                        style={{width:"100%",height:"100%"}} alt=""/>
+                                    </div> 
+                                    <div>
+                                        <p>2020.{v.show_time_top}</p>
+                                        <p>{v.name}</p>
+                                        <p>{v.city_name} | {v.venue_name}</p>
+                                        <div>{v.support_desc.map(m=>{
+                                                    return (<div>{m}</div>)
+                                                })}
+                                            </div>
+                                        <p>￥{v.min_price}<span>起</span></p>
+                                    </div>
+                                </div>)
+                            })
+                        }
                         <div>
                             查看更多演出
                             <i className="iconfont icon-gengduo1"></i>
@@ -157,5 +139,21 @@ export default class Detail extends Component {
                 </div>
             </div>
         )
+    }
+    async componentDidMount(){
+        const {data} = await axios.get("/jc/Show/Search/getShowList",{
+            params:{
+                city_id:1,
+                category:79
+            }
+        })
+        this.setState({
+            // category:data.data.list.cate_parent_id,
+            result:
+                data.data.list
+            
+        })
+        console.log(data.data.list);
+        console.log(this.state.result);
     }
 }
