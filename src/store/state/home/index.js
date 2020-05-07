@@ -1,7 +1,5 @@
 export default {
-<<<<<<< HEAD
-    homeList:[],
-=======
+
     //存放广告轮播图的图片
     slide_list:[],
     //存放分类
@@ -21,5 +19,4 @@ export default {
     //橙PLus卡
     equity_list:[],
     plusDetail:""
->>>>>>> li
 }
