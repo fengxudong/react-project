@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+// import './index.css';
 import App from './App';
 import {Provider} from "react-redux"
 import store from "./store"
@@ -13,8 +13,6 @@ import "lib-flexible";
 import axios from "axios";
 React.Component.prototype.$axios = axios;
 
-
-
 // axios 请求拦截
 axios.interceptors.request.use(config=>{
     config.url = "/jc"+config.url;
@@ -26,14 +24,28 @@ axios.interceptors.response.use(({data})=>{
     return data;
 })
 
+// 引入px2rem插件
+// import "lib-flexible";
+// //引入axios
+// import axios from "axios";
+// React.Component.prototype.$axios = axios;
+// //设置请求拦截
+// axios.interceptors.request.use(config=>{
+//     config.url = "/jc" +config.url;
+//     return config;
+// })
+//
+// axios.interceptors.response.use(({data})=>{
+//     return data;
+// })
 ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store}>
-          <App />
-      </Provider>
-      
-  </React.StrictMode>,
-  document.getElementById('root')
+    <React.StrictMode>
+        <Provider store={store}>
+            <App/>
+        </Provider>
+
+    </React.StrictMode>,
+    document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change

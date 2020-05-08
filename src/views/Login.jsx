@@ -10,6 +10,7 @@ export default class Login extends Component {
         )
     }
     ret(){
-        this.props.history.go(-1)
+
+        this.props.history.go(-1);
     }
 }

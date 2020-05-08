@@ -48,7 +48,7 @@ class SelectCity extends Component {
                                                return (
                                                    <div key={v.id}>
                                                        <li onClick={()=>{
-                                                           this.props.history.push("/"+v.id)
+                                                           this.props.history.push("/")
                                                        }} className={`${style.city_block_con_item} ${style.hots_item}`}>
                                                            {v.name}
                                                        </li>
