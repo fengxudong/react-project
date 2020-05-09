@@ -16,7 +16,7 @@ export default class My extends Component {
         
     }
     render() {
-        console.log(this)
+        // console.log(this)
         return (
             
             <div className="My">
@@ -70,11 +70,15 @@ export default class My extends Component {
                </div>
                <div className="card">
                    <div>
-                       <dl>
+                       <dl onClick={()=>{
+                           this.props.history.push("/order")
+                       }}>
                            <dt className="iconfont icon-icon-"></dt>
                            <dd>我的订单</dd>
                        </dl>
-                       <dl>
+                       <dl onClick={()=>{
+                           this.props.history.push("/ticket")
+                       }}>
                            <dt className="iconfont icon-piaojia-moren"></dt>
                            <dd>我的票夹</dd>
                        </dl>
@@ -117,15 +121,15 @@ export default class My extends Component {
     }
     componentWillMount(){
         
-          // 获取登陆状态
-          var user = JSON.parse(localStorage.getItem("user"));
-          if(user){
-              console.log(111111)
-              this.setState({
-                  isLogin:true
-              })
-          }
-    }
+        // 获取登陆状态
+        var user = JSON.parse(localStorage.getItem("user"));
+        if(user){
+            console.log(111111)
+            this.setState({
+                isLogin:true
+            })
+        }
+  }
 
 }
 

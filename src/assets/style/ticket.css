@@ -1,0 +1,56 @@
+.piaojiaym{
+    height: 8.11rem;
+    background: white;
+    color:#999999
+}
+section{
+    width: 100%;
+    height: 0.4rem;
+    background: white;
+    position: fixed;
+    top: 0;
+    border-bottom: 1px solid #ebebeb;
+}
+section p{
+    width: 100%;
+    height: 100%;
+    line-height: 0.4rem;
+    /* margin-left: 0.2rem; */
+
+}
+section b{
+    width: 0.4rem;
+    height: 0.4rem;
+    position: absolute;
+    font-size: 0.28rem;
+    /* background: green; */
+    line-height: 0.35rem;
+    top: 0;
+    left: 0;
+}
+section span{
+    width: 0.4rem;
+    height: 0.4rem;
+    position: absolute;
+    font-size: 0.28rem;
+    /* background: green; */
+    line-height: 0.23rem;
+    top: 0;
+    right: 0;
+}
+
+.piaojiaym img{
+    margin: 2rem auto 0.2rem;
+    width: 1.09rem;
+    height: 0.775rem;
+    /* border: 1px solid #333; */
+}
+.piaojiaym button{
+    margin: 0.63333rem auto 0;
+    height: 0.40rem;
+    width: 1.45rem;
+    border-radius: 26.66667rem;
+    background: linear-gradient(-50deg,#FF4D4A,#FF9A34);
+    border: none;
+    color: ivory;
+}

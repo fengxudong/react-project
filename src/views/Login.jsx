@@ -134,6 +134,7 @@ export default class Login extends Component {
     
     componentDidMount(){
         console.log(this.state)
+        this.forceUpdate();
     }
     
 }
