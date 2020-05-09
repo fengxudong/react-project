@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import style from "../assets/css/theater.module.css";
 import axios from "axios";
+import Timeline from "../components/Timeline"
 export default class Theater extends Component {
     constructor(props){
         super(props);
@@ -30,25 +31,18 @@ export default class Theater extends Component {
                                         <a href={"./theater/theaterlist/" + v.id}><i className="iconfont icon-gengduo"></i></a>
                                     </div>
                                 </div>
-                                     <div >
-                                        <ul className={style.timeline}>
-                                            <li>
-                                                <span>05月29日</span>
+                                <div className={style.wrap}>
+                                    <ul className={style.timeline}>
+                                        {v.showList.map(m=>{
+                                            return(
+                                            <li key={m.id}>
+                                                <span>{m.show_time}</span> 
                                                 <b></b>
-                                                <a href=""><img src={require('../assets/image/3.jpg')} alt=""/></a>
-                                            </li>
-                                            <li>
-                                                <span>05月30日</span>
-                                                <b></b>
-                                                <a href=""><img src={require('../assets/image/4.jpg')} alt=""/></a>
-                                            </li>
-                                            <li>
-                                                <span>06月04日</span>
-                                                <b></b>
-                                                <a href=""><img src={require('../assets/image/5.jpg')} alt=""/></a>
-                                            </li>
-                                        </ul>
-                                    </div>    
+                                                <a href=""><img src={m.pic} alt=""/></a>
+                                            </li>)
+                                        })}
+                                    </ul>
+                                </div>
                             </div>)
                         })
                     } 
