@@ -1,0 +1,143 @@
+.city {
+  width: 100%;
+  height: 100%;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+/*头部*/
+.head_nav{
+  //position: fixed;
+  //top: 0;
+  width: 100%;
+  height: 1.17333rem;
+  line-height: 1.17333rem;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ebebeb;
+  background-color: #fefefe;
+  z-index: 100;
+  .back_icon{
+    position: absolute;
+    left: 0.44rem;
+    top: 0.3rem;
+  }
+  .head_icon{
+    position: absolute;
+    //top: rem;
+    display: inline-block;
+    width: 1.33333rem;
+    height: 100%;
+  }
+
+  .title {
+    font-size: 0.48rem;
+    font-weight: normal;
+    color: #232323;
+    padding: 0 1.33333rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+//头部下的大板块
+.main{
+  flex: 2;
+  overflow-y: auto;
+}
+
+//定位城市
+.city_block_con{
+  padding: 0.34667rem 1.01333rem 0 0.4rem;
+}
+
+.city_block_con_tip{
+  font-size: 0.32rem;
+  font-weight: normal;
+  color: #999;
+  display: flex;
+  height: 0.70667rem;
+  align-items: center;
+  margin-bottom: 0.13333rem;
+}
+
+.city_block_con_wrap{
+  display: flex;
+  flex-wrap: wrap;
+  .city_block_con_item{
+    //height: 0.93333rem;
+    border: solid 1px #ebebeb;
+    background-color: #fefefe;
+    border-radius: 0.08rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.34667rem;
+    color: #232323;
+    margin-right: 0.2rem;
+  }
+
+  .location_item{
+    width: auto;
+    height: 0.96rem;
+    min-width: 2.69333rem;
+    padding: 0 0.2rem;
+    box-sizing: border-box;
+  }
+
+  .hots_item{
+    width: 2.609274rem;
+    height: 0.93333rem;
+    margin-bottom: 0.2rem;
+  }
+}
+
+//字母对应地址
+.city_block_row{
+  .city_block__row__con__letter{
+    height: 0.77333rem;
+    display: flex;
+    align-items: center;
+    padding-left: 0.4rem;
+    font-size: 0.34667rem;
+    color: #999;
+  }
+  .city_block__row__con__wrap{
+    padding: 0 1.13333rem 0 0.4rem;
+    background-color: #fefefe;
+    .city_block__row__con__column{
+      height: 1.33333rem;
+      display: flex;
+      align-items: center;
+      font-size: 0.34667rem;
+      color: #232323;
+      border-bottom: 1px solid #ebebeb;
+    }
+  }
+}
+
+a{
+  color: #666;
+}
+
+// 字母侧边栏
+.city_nav{
+  position: fixed;
+  right: 0.34rem;
+  top: 3.17333rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  .city_nav_lab{
+    font-size: 0.26667rem;
+    color: #666;
+    margin-bottom: 0.08rem;
+    >a:hover{
+      color: #ff6743;
+    }
+  }
+}

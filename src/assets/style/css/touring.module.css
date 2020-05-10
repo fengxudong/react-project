@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.tourList {
+    margin-top: 1.2rem;
+}
+
+.tourContent {
+    padding: 0.44rem 0 0.44rem 0.4rem;
+    display: flex;
+}
+
+.tourPic {
+    width: 2.93333rem;
+    height: 4rem;
+    border-radius: 0.10667rem;
+    overflow: hidden;
+}
+
+.tourPic > img {
+    width: 100%;
+    height: 100%;
+}
+
+.tourRight {
+    padding-right: 0.2rem;
+    box-sizing: border-box;
+    width: 6rem;
+}
+
+.tourRight > p {
+    height: 1.54667rem;
+    margin-left: 0.38667rem;
+    padding-top: 0.33333rem;
+    font-size: 0.42667rem;
+    color: #232323;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.tourSwiper {
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    list-style: none;
+    z-index: 1;
+    display: flex;
+    display: -webkit-box;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.tourCityListItem {
+    position: relative;
+    width: 1.6rem;
+}
+
+.tourCityListItem > div:nth-child(1) {
+    padding: 0.38667rem 0;
+    text-align: center;
+    color: #666666;
+    font-size: 0.34667rem;
+    max-width: 1.6rem;
+}
+
+.tourCityListItem > div:nth-child(1) > p {
+    position: absolute;
+    bottom: 1.15rem;
+    right: 0;
+    width: 100%;
+    height: 0.05333rem;
+    background-color: #EBEBEB;
+}
+
+.tourSwiper > div:nth-child(1) > div:nth-child(1) > p:nth-child(1) {
+    left: auto;
+    width: 50%;
+}
+.tourSwiper > div:last-child > div:nth-child(1) > p:nth-child(1) {
+    left: -0.1rem;
+    width: 50%;
+}
+/*原点*/
+.tourCityListItem > p:nth-child(2) {
+    width: 0.18667rem;
+    height: 0.18667rem;
+    background: #CCCCCC;
+    border-radius: 50%;
+     margin-left: -0.09333rem;
+    margin-top: -0.15rem;
+    position: absolute;
+    left: 0.8rem;
+}
+
+.tourCityListItem > p:nth-child(3) {
+    padding: 0.33333rem 0;
+    font-size: 0.32rem;
+    color: #999999;
+    text-align: center;
+}
