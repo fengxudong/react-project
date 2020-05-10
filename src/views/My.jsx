@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import '../assets/style/my.css'
+import '../assets/style/my/my.css'
 import headImg from '../assets/images/headImg.png'
 import vipImg from '../assets/images/vipImg.png'
 import headImg1 from '../assets/images/headImg1.png'
@@ -22,7 +22,9 @@ export default class My extends Component {
             <div className="My">
                <div>
                    <div className="top">
-                       <div className="sz">
+                       <div className="sz" onClick={()=>{
+                           this.props.history.push("/set")
+                       }}>
                             设置
                        </div>
                        <div className="topMain">

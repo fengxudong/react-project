@@ -1,11 +1,11 @@
 #lightprompt{
-    width: 1.5rem;
-    height: 0.7rem;
+    width: 300px;
+    height: 150px;
     background: #ccc;
     opacity: 0.5;
     text-align: center;
-    line-height: 0.7rem;
-    border-radius: 0.1rem;
+    line-height: 150px;
+    border-radius: 30px;
     position:absolute;
     top: 0;
     left: 0;

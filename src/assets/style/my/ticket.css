@@ -1,56 +1,59 @@
 .piaojiaym{
-    height: 8.11rem;
+    height: 800px;
     background: white;
     color:#999999
 }
 section{
     width: 100%;
-    height: 0.4rem;
+    height: 80px;
     background: white;
     position: fixed;
     top: 0;
     border-bottom: 1px solid #ebebeb;
+    font-size: 36px;
 }
 section p{
     width: 100%;
     height: 100%;
-    line-height: 0.4rem;
+    line-height: 80px;
     /* margin-left: 0.2rem; */
 
 }
 section b{
-    width: 0.4rem;
-    height: 0.4rem;
+    float: left;
+    width: 80px;
+    height: 80px;
     position: absolute;
-    font-size: 0.28rem;
-    /* background: green; */
-    line-height: 0.35rem;
-    top: 0;
     left: 0;
+    top: 0;
+    line-height: 75px;
+    font-size: 44px;
 }
+
 section span{
-    width: 0.4rem;
-    height: 0.4rem;
+    width: 80px;
+    height: 80px;
     position: absolute;
-    font-size: 0.28rem;
+    font-size: 56px;
     /* background: green; */
-    line-height: 0.23rem;
+    line-height: 44px;
     top: 0;
     right: 0;
 }
 
 .piaojiaym img{
-    margin: 2rem auto 0.2rem;
-    width: 1.09rem;
-    height: 0.775rem;
+    margin: 400px auto 40px;
+    width: 218px;
+    height: 155px;
     /* border: 1px solid #333; */
 }
 .piaojiaym button{
-    margin: 0.63333rem auto 0;
-    height: 0.40rem;
-    width: 1.45rem;
-    border-radius: 26.66667rem;
+    margin: 126.666px auto 0;
+    height: 80px;
+    width: 290px;
+    border-radius: 5333.334px;
     background: linear-gradient(-50deg,#FF4D4A,#FF9A34);
     border: none;
     color: ivory;
+    font-size: 30px;
 }

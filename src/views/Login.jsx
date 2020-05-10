@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import '../assets/style/login.css'
+import '../assets/style/my/login.css'
 import loginLogo from '../assets/images/loginlogo.png'
 import qq from '../assets/images/qq.png'
 import wb from '../assets/images/wb.png'
@@ -82,7 +82,7 @@ export default class Login extends Component {
         )
     }
     ret(){
-        this.props.history.go(-1)
+        this.props.history.push("/my")
     }
     loginTo(event){
         if(event.target.name === "dl"){

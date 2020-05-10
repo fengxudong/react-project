@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import '../../assets/style/ticket.css'
+import '../../assets/style/my/ticket.css'
 import dingdan from "../../assets/images/ddImg.png"
 export default class Order extends Component {
  

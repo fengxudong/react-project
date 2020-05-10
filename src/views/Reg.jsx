@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import '../assets/style/login.css'
+import '../assets/style/my/login.css'
 import loginLogo from '../assets/images/loginlogo.png'
 import qq from '../assets/images/qq.png'
 import wb from '../assets/images/wb.png'
@@ -62,7 +62,7 @@ export default class Login extends Component {
                 <div className="logbot">
                     <p>忘记密码</p>
                     <p onClick={()=>{
-                        this.props.history.push("/reg")
+                        this.props.history.push("/login")
                     }}>密码登录</p>
                 </div>
 
@@ -84,7 +84,7 @@ export default class Login extends Component {
     }
     // 返回
     ret(){
-        this.props.history.go(-1)
+        this.props.history.push("/login")
     }
     async loginTo(){
             if(this.state.islogto === true){

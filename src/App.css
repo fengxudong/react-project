@@ -41,7 +41,6 @@ body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,dl,dt,dd,figure,figcaption,fieldset{
 }
 ol,ul,li{list-style: none;}
 h1,h2,h3,h4,h5,h6{
-  font-size: 14px;
   font-weight: normal;
 }
 a{
@@ -60,27 +59,4 @@ img{
 input{
   border: 0;
   outline: none;
-}
-
-.clear_fix::after{
-  content: ".";
-  display: block;
-  clear: both;
-  height: 0;
-  overflow: hidden;
-}
-.clear_fix{
-  *zoom:1;
-}
-.fl{
-  float: left;
-}
-.fr{
-  float: right;
-}
-html,body{
-height: 100%;
-}
-body{
-  font-size: 16px;
 }

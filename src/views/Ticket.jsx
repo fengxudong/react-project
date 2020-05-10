@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import '../assets/style/ticket.css'
+import '../assets/style/my/ticket.css'
 import piaojia from '../assets/images/piaojia.png'
 export default class Ticket extends Component {
     constructor(props){

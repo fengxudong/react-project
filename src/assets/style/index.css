@@ -1,24 +1,23 @@
 nav{
     position: fixed;
     bottom:0;
-    width: 375px;
-    height: 49px;
+    height: 100px;
     background: #fff;
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     align-items: center;
     width: 100%;
-    /* max-width: 5.4rem; */
-    border-top: 1px solid #ebebeb; ;
+    border-top: 1px solid #ebebeb;
+    z-index: 99999;
 }
 nav p{
     display: flex;
     flex-direction: column;
-    font-size: 0.026667rem;
+    width: 25%;
 }
 nav img{
     margin: 0 auto;
-    width: 0.3rem;
+    height: 62px;
 }
 .active{
     color: red;

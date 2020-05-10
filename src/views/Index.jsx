@@ -37,7 +37,7 @@ export default class Index extends Component {
             <div className="index">
                 
                     <nav>
-                        {this.state.sy === true?<p><img src={shouye2} style={{width:"0.43rem"}} alt=""/></p>:<p className="sy" onClick={this.switchImg.bind(this)}> <img src={shouye1} alt=""/> <NavLink exact to={"/"} activeClassName="active">首页</NavLink></p>}
+                        {this.state.sy === true?<p><img src={shouye2} style={{width:"43px",height:"43px"}} alt=""/></p>:<p className="sy" onClick={this.switchImg.bind(this)}> <img src={shouye1} alt=""/> <NavLink exact to={"/"} activeClassName="active">首页</NavLink></p>}
                         <p className="jy" onClick={this.switchImg.bind(this)}> <img src={this.state.jy === true? juyuan2:juyuan1} alt=""/> <NavLink to={"/theater"} activeClassName="active">剧院</NavLink></p>
                         <p className="pj" onClick={this.switchImg.bind(this)}> <img src={this.state.pj === true? piaojia2:piaojia1} alt=""/> <NavLink to={"/ticket"} activeClassName="active">票夹</NavLink></p>
                         <p className="wd" onClick={this.switchImg.bind(this)}> <img src={this.state.wd === true? wode2:wode1} alt=""/> <NavLink to={"/my"} activeClassName="active">我的</NavLink></p>
