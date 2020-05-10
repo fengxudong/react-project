@@ -44,6 +44,7 @@
     align-items: center;
 }
 .card div dl{
+    text-align: center;
     /* font-size: 1000px;     */
     color: #666666;
     width: 25%;

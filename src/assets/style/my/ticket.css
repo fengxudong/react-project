@@ -1,7 +1,10 @@
 .piaojiaym{
-    height: 800px;
+    /* height: 800px; */
     background: white;
-    color:#999999
+    color:#999999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 section{
     width: 100%;
@@ -11,6 +14,7 @@ section{
     top: 0;
     border-bottom: 1px solid #ebebeb;
     font-size: 36px;
+    text-align: center;
 }
 section p{
     width: 100%;
@@ -48,12 +52,15 @@ section span{
     /* border: 1px solid #333; */
 }
 .piaojiaym button{
-    margin: 126.666px auto 0;
-    height: 80px;
+    height: 100px;
     width: 290px;
-    border-radius: 5333.334px;
     background: linear-gradient(-50deg,#FF4D4A,#FF9A34);
     border: none;
+    margin: 126.666px auto 0;
+    
+    border-radius: 5333.334px;
+    
+   
     color: ivory;
     font-size: 30px;
 }

@@ -35,6 +35,7 @@ html{
 }
 .loginFrom hr{
     width: 84%;
+    margin: 0 auto;
 }
 .loginFrom p{
     /* border: 1px solid #333; */
@@ -43,7 +44,7 @@ html{
 }
 .loginFrom p input{
     width: 90%;
-    height: 60px;
+    height: 110px;
     font-size: 32px;
 }
 .loginFrom>input{
@@ -66,6 +67,7 @@ html{
 #bastBottom{
     width: 100%;
     /* margin-top: 1.5px; */
+ 
     position:absolute;
     bottom: 80px;
 }
@@ -81,6 +83,7 @@ html{
     /* width: 15%; */
     font-size: 0.2px;
     margin-top: 3px;
+    margin: 0 auto;
 }
 .bastBottom hr{
     width: 20%;
